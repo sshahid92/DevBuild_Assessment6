@@ -12,4 +12,5 @@ namespace DevBuild_Assessment6_PutMeOnTheList.Models
         public string DishName { get; set; }
         public bool DishDescription { get; set; }
         public string Options { get; set; }
+    }
 }
