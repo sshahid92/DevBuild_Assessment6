@@ -33,5 +33,15 @@ namespace DevBuild_Assessment6_PutMeOnTheList.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult BringADish(Dish dish)
+        {
+            var newdish = dish;
+            return RedirectToAction("DishComplete", dish);
+        }
+        public ActionResult ThankYouForDish(Dish dish)
+        {
+            return View();
+        }
     }
 }
