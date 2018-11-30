@@ -2,6 +2,45 @@
 @{
     ViewBag.Title = "Rsvp";
 }
+<script src="~/Scripts/Validation.js"></script>
 
-<h2>Rsvp</h2>
+<h1>RSVP Information</h1>
+<h3>Please fill out the form to RSVP.</h3>
+<form name="rsvpInfo" method="post">
+    <fieldset>
+        <legend>Team Member Information</legend>
+        First Name:<br />
+        <input type="text" name="firstname" id="firstname" required><br />
+        <p id="fnMessage"></p>
 
+        Last Name:<br />
+        <input type="text" name="lastname" id="lastname" required><br />
+        <p id="lnMessage"></p>
+
+        Email:<br />
+        <input type="email" name="email" id="email" required><br />
+        <p id="emailMessage"></p>
+
+        Will you be attending?<br />
+        <input id="yes" type="radio" name="attendance" value="yes" onclick="isGoing()"> Yes
+        <input id="no" type="radio" name="attendance" value="no" onclick="isGoing()"> No<br />
+        <p id="isGoingMessage"></p>
+            <div id="isGoing">
+                Which date would you like to attend?
+                <input type="radio" name="date" value="December 8, 2018 8:00 PM"> December 8, 2018 8:00 PM
+                <input type="radio" name="date" value="December 9, 2018 8:00 PM"> December 9, 2018 8:00 PM<br />
+
+                Will you be bringing a guest?<br />
+                <input type="radio" name="guest" value="yes"> Yes
+                <input type="radio" name="guest" value="no"> No<br />
+
+                <legend>Guest Information</legend>
+                Guest First Name:<br />
+                <input type="text" name="guestFirstname"><br />
+
+                Guest Last Name:<br />
+                <input type="text" name="guestLastname"><br />
+            </div>
+    </fieldset>
+    <input id="rsvp" type="submit" value="RSVP">
+</form>
