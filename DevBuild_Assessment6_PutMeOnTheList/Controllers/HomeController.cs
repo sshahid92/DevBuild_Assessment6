@@ -13,17 +13,13 @@ namespace DevBuild_Assessment6_PutMeOnTheList.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Rsvp()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult BringADish()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
