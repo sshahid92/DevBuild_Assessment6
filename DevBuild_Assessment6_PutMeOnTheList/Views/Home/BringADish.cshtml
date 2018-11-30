@@ -3,5 +3,16 @@
     ViewBag.Title = "BringADish";
 }
 
-<h2>BringADish</h2>
-
+<h1>Dish Information</h1>
+<h3>Please fill out the dish information</h3>
+<form name="rsvpInfo" method="post">
+    <fieldset>
+        <legend>Dish Information</legend>
+        Name:<br />
+        <input type="text" name="name" id="name" required><br />
+        <p id="nameMessage"></p>
+                
+       
+    </fieldset>
+    <input id="rsvp" type="submit" value="RSVP">
+</form>
