@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = "Rsvp";
 }
-<script src="~/Scripts/Validation.js"></script>
 
 <h1>RSVP Information</h1>
 <h3>Please fill out the form to RSVP.</h3>
@@ -25,22 +24,27 @@
         <input id="yes" type="radio" name="attendance" value="yes" onclick="isGoing()"> Yes
         <input id="no" type="radio" name="attendance" value="no" onclick="isGoing()"> No<br />
         <p id="isGoingMessage"></p>
-            <div id="isGoing">
-                Which date would you like to attend?
-                <input type="radio" name="date" value="December 8, 2018 8:00 PM"> December 8, 2018 8:00 PM
-                <input type="radio" name="date" value="December 9, 2018 8:00 PM"> December 9, 2018 8:00 PM<br />
+        <div id="isGoing">
+            Which date would you like to attend?
+            <input id="date1" type="radio" name="date" value="December 8, 2018 8:00 PM"> December 8, 2018 8:00 PM
+            <input id="date2"type="radio" name="date" value="December 9, 2018 8:00 PM"> December 9, 2018 8:00 PM<br />
+            <p id="dateMessage"></p>
 
-                Will you be bringing a guest?<br />
-                <input type="radio" name="guest" value="yes"> Yes
-                <input type="radio" name="guest" value="no"> No<br />
-
+            Will you be bringing a guest?<br />
+            <input id="guestYes" type="radio" name="guest" value="yes"> Yes
+            <input id="guestNo" type="radio" name="guest" value="no"> No<br />
+            <p id="guestMessage"></p>
+            <div id="guestInfo">
                 <legend>Guest Information</legend>
                 Guest First Name:<br />
-                <input type="text" name="guestFirstname"><br />
+                <input type="text" name="guestFirstname" id="guestFirstname"><br />
+                <p id="guestfnMessage"></p>
 
                 Guest Last Name:<br />
-                <input type="text" name="guestLastname"><br />
+                <input type="text" name="guestLastname" id="guestLastname"><br />
+                <p id="guestlnMessage"></p>
             </div>
+        </div>
     </fieldset>
     <input id="rsvp" type="submit" value="RSVP">
 </form>

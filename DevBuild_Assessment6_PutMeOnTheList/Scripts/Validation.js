@@ -44,10 +44,37 @@ function validate() {
         emailMessage.css("color", "red");
         return false;
     }
-    if (!document.getElementById("yes").checked || !document.getElementById("no").checked) {
+    if (!document.getElementById("yes").checked && !document.getElementById("no").checked) {
         isGoingMessage.text("Please check whether your are going.");
         isGoingMessage.css("color", "red");
         return false;
+    }
+
+    if (document.getElementById("yes").checked) {
+        $("#isGoingMessage").text("");
+        var dateMessage = $("#dateMessage");
+        dateMessage.text("");
+
+        var guestMessage = $("#guestMessage");
+        guestMessage.text("");
+
+        var guestfnMessage = $("#guestfnMessage");
+        var guestfirstname = $("#guestfirstname").val();
+        guestfnMessage.text("");
+
+        var guestlnMessage = $("#guestlnMessage");
+        var guestlastname = $("#guestlastname").val();
+        guestlnMessage.text("");
+        if (!document.getElementById("date1").checked && !document.getElementById("date2").checked) {
+            dateMessage.text("Please select a date.");
+            dateMessage.css("color", "red");
+            return false;
+        }
+        if (!document.getElementById("guestYes").checked && !document.getElementById("guestNo").checked) {
+            guestMessage.text("Please check whether you are bringing a guest.");
+            guestMessage.css("color", "red");
+            return false;
+        }
     }
     return true;
 }
