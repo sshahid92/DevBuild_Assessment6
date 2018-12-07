@@ -1,8 +1,8 @@
-﻿@model DevBuild_Assessment6_PutMeOnTheList.Models.Rsvp
+﻿@model DevBuild_Assessment6_PutMeOnTheList.Models.Guest
 @{
     ViewBag.Title = "RSVP Complete";
 }
 
 <h2>Thank you for your RSVP @Model.FirstName @Model.LastName!</h2>
-<p>You will be attending the Quicken Holiday Party on @Model.Date <span class="guest">with @Model.GuestFirstName @Model.GuestLastName</span></p>
+<p>You will be attending the Quicken Holiday Party on @Model.AttendanceDate <span id="guest">with @Model.Guest1</span></p>
 

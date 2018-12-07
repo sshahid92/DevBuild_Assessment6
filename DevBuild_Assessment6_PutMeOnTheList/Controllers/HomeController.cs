@@ -19,13 +19,13 @@ namespace DevBuild_Assessment6_PutMeOnTheList.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Rsvp(Rsvp teamMember)
+        public ActionResult Rsvp(Guest teamMember)
         {
             var teamMemberRsvp = teamMember;
-            return RedirectToAction("RsvpComplete", teamMemberRsvp);
+            return RedirectToAction("SaveGuest", "Database", teamMemberRsvp);
         }
 
-        public ActionResult RsvpComplete(Rsvp teamMemberRsvp)
+        public ActionResult RsvpComplete(Guest teamMemberRsvp)
         {
             return View(teamMemberRsvp);
         }
@@ -36,12 +36,12 @@ namespace DevBuild_Assessment6_PutMeOnTheList.Controllers
         [HttpPost]
         public ActionResult BringADish(Dish dish)
         {
-            var newdish = dish;
-            return RedirectToAction("DishComplete", dish);
+            var bringDish = dish;
+            return RedirectToAction("SaveDish", "Database", bringDish);
         }
         public ActionResult ThankYouForDish(Dish dish)
         {
-            return View();
+            return View(dish);
         }
     }
 }

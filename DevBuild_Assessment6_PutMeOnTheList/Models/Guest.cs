@@ -12,13 +12,13 @@ namespace DevBuild_Assessment6_PutMeOnTheList.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Dish
+    public partial class Guest
     {
-        public int DishID { get; set; }
-        public string PersonName { get; set; }
-        public string PhoneNumber { get; set; }
-        public string DishName { get; set; }
-        public string DishDescription { get; set; }
-        public string Option { get; set; }
+        public int GuestID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public Nullable<System.DateTime> AttendanceDate { get; set; }
+        public string EmailAddress { get; set; }
+        public string Guest1 { get; set; }
     }
 }
